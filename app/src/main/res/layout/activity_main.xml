@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ===== FORMULARIO ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_tarjeta"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvModo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nueva mascota"
+                android:textColor="@color/primario"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- 4. ImageView: cambia según la especie -->
+            <ImageView
+                android:id="@+id/ivEspecie"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_circulo"
+                android:contentDescription="Imagen de la especie"
+                android:padding="14dp"
+                android:src="@drawable/ic_perro" />
+
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Nombre de la mascota"
+                android:inputType="textCapWords"
+                android:maxLength="100" />
+
+            <EditText
+                android:id="@+id/etEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Edad (años)"
+                android:inputType="number"
+                android:maxLength="2" />
+
+            <!-- 1. Lista desplegable -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Especie"
+                android:textColor="@color/texto_suave" />
+
+            <Spinner
+                android:id="@+id/spEspecie"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+            <!-- 3. RadioButton -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Sexo"
+                android:textColor="@color/texto_suave" />
+
+            <RadioGroup
+                android:id="@+id/rgSexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbMacho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Macho" />
+
+                <RadioButton
+                    android:id="@+id/rbHembra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="Hembra" />
+            </RadioGroup>
+
+            <!-- 2. CheckBox -->
+            <CheckBox
+                android:id="@+id/cbVacunado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Vacunado" />
+
+            <CheckBox
+                android:id="@+id/cbEsterilizado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Esterilizado" />
+
+            <!-- Botones CRUD -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnGuardar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primario"
+                    android:text="Guardar"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btnLimpiar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="Limpiar" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnActualizar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/azul"
+                    android:enabled="false"
+                    android:text="Actualizar"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btnEliminar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/rojo"
+                    android:enabled="false"
+                    android:text="Eliminar"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== LISTADO (READ) ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mascotas registradas"
+                android:textColor="@color/texto"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnRefrescar"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Refrescar"
+                android:textColor="@color/primario" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toca una mascota para editarla o eliminarla"
+            android:textColor="@color/texto_suave"
+            android:textSize="12sp" />
+
+        <ProgressBar
+            android:id="@+id/progreso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvVacio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="No hay mascotas registradas"
+            android:textColor="@color/texto_suave"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/contenedorLista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical" />
+    </LinearLayout>
+</ScrollView>

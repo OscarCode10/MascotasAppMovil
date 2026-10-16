@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.MascotasApp" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primario</item>
+        <item name="colorPrimaryDark">@color/primario_oscuro</item>
+        <item name="colorAccent">@color/acento</item>
+        <item name="android:windowBackground">@color/fondo</item>
+    </style>
+</resources>

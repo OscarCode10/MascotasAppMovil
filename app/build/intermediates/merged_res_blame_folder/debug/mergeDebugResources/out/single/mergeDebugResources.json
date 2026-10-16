@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.umb.mascotasapp-debug-23:/drawable_ic_perro.xml.flat",
+        "source": "com.umb.mascotasapp-main-25:/drawable/ic_perro.xml"
+    },
+    {
+        "merged": "com.umb.mascotasapp-debug-23:/drawable_ic_conejo.xml.flat",
+        "source": "com.umb.mascotasapp-main-25:/drawable/ic_conejo.xml"
+    },
+    {
+        "merged": "com.umb.mascotasapp-debug-23:/layout_item_mascota.xml.flat",
+        "source": "com.umb.mascotasapp-main-25:/layout/item_mascota.xml"
+    },
+    {
+        "merged": "com.umb.mascotasapp-debug-23:/layout_activity_main.xml.flat",
+        "source": "com.umb.mascotasapp-main-25:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.umb.mascotasapp-debug-23:/drawable_ic_gato.xml.flat",
+        "source": "com.umb.mascotasapp-main-25:/drawable/ic_gato.xml"
+    },
+    {
+        "merged": "com.umb.mascotasapp-debug-23:/drawable_ic_ave.xml.flat",
+        "source": "com.umb.mascotasapp-main-25:/drawable/ic_ave.xml"
+    },
+    {
+        "merged": "com.umb.mascotasapp-debug-23:/drawable_bg_tarjeta.xml.flat",
+        "source": "com.umb.mascotasapp-main-25:/drawable/bg_tarjeta.xml"
+    },
+    {
+        "merged": "com.umb.mascotasapp-debug-23:/drawable_bg_circulo.xml.flat",
+        "source": "com.umb.mascotasapp-main-25:/drawable/bg_circulo.xml"
+    },
+    {
+        "merged": "com.umb.mascotasapp-debug-23:/drawable_ic_pez.xml.flat",
+        "source": "com.umb.mascotasapp-main-25:/drawable/ic_pez.xml"
+    }
+]
